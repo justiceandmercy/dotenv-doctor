@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dotenv-doctor"
+version = "0.1.0"
+description = "Lint .env files for missing keys, duplicates, empty values, placeholders, and drift from .env.example."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "dotenv-doctor contributors" }]
+keywords = ["dotenv", "env", "lint", "cli"]
+
+[project.scripts]
+dotenv-doctor = "dotenv_doctor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
